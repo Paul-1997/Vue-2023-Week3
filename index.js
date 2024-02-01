@@ -97,6 +97,7 @@ const app = createApp({
 					`${base}/v2/api/paul7426/admin/product/${id}`,
 					authToken
 				);
+				this.statusMsg = result.data.message;
 				this.getProduct();
 			} catch (err) {
 				const errMsg = err?.response?.data.message;
